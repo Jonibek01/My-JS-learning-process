@@ -1,0 +1,9 @@
+// var asking = alert('Good morning, welcome to the Teshavoy corparation :)\nPlease answer to following questions :)' );
+        // var firstName = prompt ('Your name?');
+        // var lastName = prompt ('Your surname?');
+        // var age = prompt ('Your age?');
+        // var occupation = prompt ('What do you do?');
+        // var tgLink = prompt ('Telegram link');
+
+        // var result = ('New client:' + '\nName: ' + firstName + ' ' + lastName  + '\nAge: ' + age + '\nOccupation: ' + occupation + '\nTelegram Profil: ' + tgLink + '\nThank u for joining us');    
+        // console.log(result);
