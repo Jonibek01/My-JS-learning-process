@@ -1,0 +1,14 @@
+var price = prompt('How much money do u have?');
+var elMessage = document.querySelector('.sms');
+var usdToUsz = 9344.04;
+var euroToUsz = 10400.65;
+var totalFromUsdToUzs = 750 * usdToUsz;
+var totalFromUerToUzs = 120 * euroToUsz;
+var totalExpenses = Math.ceil(totalFromUerToUzs + totalFromUsdToUzs);
+var rate = totalExpenses - price;
+if ( price >= totalExpenses) {
+    elMessage.textContent = ('Bro u ave ' + price + ' go ahead');
+} else {
+    elMessage.textContent = ` u will need ${rate} money to go`;
+}
+//'Sizga ' + rate + "so'm Pul yetmadi Boshqa sapar borarsiz"
