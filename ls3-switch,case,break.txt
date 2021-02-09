@@ -1,0 +1,39 @@
+// mostly switch will be used for changeable elemnts
+// break stands for new line
+// case for separating
+
+var days = 656;
+
+switch (days){
+  case 1 : {
+    console.log('monday');
+    break;
+  }
+    case 2 : {
+    console.log('t');
+      break;
+  }
+    case 3 : {
+    console.log('w');
+      break;
+  }
+    case 4 : {
+    console.log('th');
+    break;
+  }
+    case 5 : {
+    console.log('fr');
+      break;
+  }
+    case 6 : {
+    console.log('sat');
+      break;
+  }
+    case 7 : {
+    console.log('sun');
+      break;
+  }
+    default : {
+    console.log('brat');
+}
+}
