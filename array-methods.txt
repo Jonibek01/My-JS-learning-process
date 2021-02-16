@@ -1,0 +1,16 @@
+// Array is mutable so they are changeable and after changing they will be saved as well, 
+// [] - brackets will be used for arrays
+// push - adds to end any types of elements including numbers, strings, booleans and others
+// pop - removes from end the last type
+// unshift - adds those types to the start
+// shift - removes those types from start
+// [class.length] - length means the amount of those elements
+// concat - adding, f.e    1stClass.concat(2ndClass, 3rd, 4th);
+// includes() - boolean - that means, is there anything in lists f.e and it gives True, False values
+// indexOf() - the place of elements
+// reverse() - reversing the types f.e 1,2,3,4,5 ----> 5,4,3,2,1
+// join() - used for adding anything between strings or removing extra spaces
+// slice() - taking the elements from numbers f.e if there 5 names, can write slice(3,5) it takes all elements from 3rd to except 5
+// splice(start, number, " ") - so start means from which number should splice,  number means from that number(start) how many should be removed and " " - that means adding string in that order
+// sort() - it sorts correctly f.e alphabitical, numerical orderly corrects
+// reference type can change the value of unchangable type of elements    
