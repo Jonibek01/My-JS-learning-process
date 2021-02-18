@@ -1,0 +1,104 @@
+// ================ OBJECTS ========================
+// const userReviews = {};
+
+// Adding a new property:
+// userReviews['queenBee49'] = 4.0;
+// userReviews.mrSmith78 = 3.5;
+
+// Updating existing properties
+// userReviews['queenBee49'] += 2;
+// userReviews.mrSmith78++;
+
+
+// if we want to get info from object we should firstly access to the variable and then put . and property name or ["property name"]
+// [variable can be only in brackets]
+// f.e var.propName[1][3] accessing to the inner value of property and if there'r a lot propNames we can give varName to the propName and take the inner value with [] 
+// WE can access to other objects by using [] brackets
+
+
+
+
+//================== for loops ============================
+
+// for loops works like if statements and its uded for minimize the codes
+
+// example: for (let i=1; i<=10; i++; ) {       i-initialExpression, i<=10 - condition,   i++  - incrementalExpression
+//    console.log('Hello');   if true it works and it's bigger, false it moves to down
+//}
+// it's better to use more/les [<= >=] than equal/not equal [!== ===] 
+//ex. const palette = {
+//	red    : '#eb4d4b',
+//	yellow : '#f9ca24',
+//	blue   : '#30336b'
+//};
+//Objects & Arrays are reference types
+//const palette2 = palette;
+//If we change one value...
+//palette2.green = '#ebf876';
+//Both variables reflect that change...
+//palette.green; //"#ebf876"
+//palette2.green; //"#ebf876"
+
+//=============================================================================
+
+// infinite loops
+// DON'T RUN THIS!
+// for (let i = 1; i !== 20; i += 2) {
+// 	console.log(i);
+// }
+
+// THE ABOVE LOOP NEVER ENDS
+// i starts at 1, and we add 2 each time
+// 1,3,5,7,9,11,13,15,17,19,21,etc.
+// i never hits 20, so the loop condition is always true
+
+// Instead, write it this way:
+//for (let i = 1; i <= 20; i += 2) {
+//	console.log(i);
+//}
+
+// ======= EXAMPLE 1 ==========
+// Printing each element in an array
+const examScores = [ 98, 77, 84, 91, 57, 66 ];
+
+for (let i = 0; i < examScores.length; i++) {
+	console.log(i, examScores[i]);
+}
+
+// ======= EXAMPLE 2 ==========
+// Averaging all grades in myStudents array
+let total = 0; //total will hold the sum of all grades
+
+for (let i = 0; i < myStudents.length; i++) {
+	let student = myStudents[i];
+	total += student.grade; //add each grade to total
+}
+console.log(total / myStudents.length); //divide by number of students
+
+// ======= EXAMPLE 3 ==========
+// Reversing a string
+const word = 'stressed';
+
+let reversedWord = ''; //will hold reversed string
+
+//Loop backwards over the string
+for (let i = word.length - 1; i >= 0; i--) {
+	reversedWord += word[i]; //add each char to reversedWord
+}
+
+console.log(reversedWord);
+
+
+//=================================================================================
+
+// nested loops
+
+let totalScore = 0;
+//outer loop iterates through the rows
+for (let i = 0; i < gameBoard.length; i++) {
+	let row = gameBoard[i];
+	//inner loop iterates over each cell in a given row
+	for (let j = 0; j < row.length; j++) {
+		totalScore += row[j];
+	}
+}
