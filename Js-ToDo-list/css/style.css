@@ -1,0 +1,25 @@
+.task-heading {
+  font-size: 55px;
+  opacity: 0.5;
+
+}
+
+.remove-button {
+  font-size: 30px;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.task-list-item:hover .remove-button {
+  opacity: 1;
+}
+
+.btn-active:active,
+.btn-active:focus,
+.btn-active:hover {
+  border: 1px solid #777;
+}
+
+.completed-task .task-content {
+  text-decoration: line-through;
+}

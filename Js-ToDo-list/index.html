@@ -1,30 +1,75 @@
 <!DOCTYPE html>
-<html lang="uz">
+<html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-  <title>Shopping-list</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Document</title>
 </head>
-<body>
 
-  <section class="py-3 text-center">
+<body class="bg-light">
+
+  <h1 class="sr-only">Write your ToDos</h1>
+
+  <section class="py-5">
     <div class="container">
-      <h2 class="mb-4">todos</h2>
+      <h2 class="task-heading h1 text-center text-danger">todos</h2>
+      <div class="border w-50 mx-auto rounded overflow-hidden shadow">
+        <form class="p-2 js-task-form" action="https://echo.htmlacademy.ru" method="POST">
+          <input class="form-control border-0 rounded-0 shadow-none js-task-input" type="text"
+            placeholder="What needs to be done?" aria-label="Write your task" name="task" autocomplete="off">
+        </form>
 
-      <form class="form-list" action="#">
-        <input class="form-list-input" type="text" name="todo-name" placeholder="What needs to be done?" required aria-label="enter text">
-      </form>
+        <main>
+          <ul class="list-group js-tasks-list"></ul>
+        </main>
 
-      <ul class="todo-list list-group"></ul>
+        <footer class="footer px-3 py-2 d-none align-items-center justify-content-between js-todos-footer">
+          <span>
+            <span class="js-remained-tasks"></span>
+            items left
+          </span>
+          <div class="add-btns d-flex js-filter-buttons">
+            <div class="d-flex align-items-center">
+              <button class="btn-active btn py-1 mx-1 shadow-none js-show-all-button" type="button" active>All</button>
+              <button class="btn-active btn shadow-none py-1 mx-1 js-show-active-button" type="button">Active</button>
+              <button class="btn-active btn py-1 shadow-none mx-1 js-show-completed-button"
+                type="button">Completed</button>
+            </div>
 
+            <button class="btn btn-link text-dark shadow-none js-clear-completed-btn" type="button">Clear
+              completed</button>
+          </div>
+        </footer>
+      </div>
     </div>
   </section>
 
-  <script src="./js/app.js"></script>
+  <template id="task-template">
+    <li
+      class="tasks-li task-list-item list-group-item border-left-0 border-right-0 rounded-0 d-flex align-items-center justify-content-between js-task-list-item">
+      <div class="d-flex align-items-center">
+        <input class="js-is-completed-checkbox mr-2" type="checkbox" name="todo-completed-checkbox" data-todo-id=""
+          aria-label="Check for completed task">
+        <span class="task-content js-task-content ml-2">default</span>
+      </div>
 
-  </body>
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
-  </html>
+      <button class="remove-button btn text-danger shadow-none py-0  js-remove-task-btn" type="button"
+        data-todo-id="">&Cross;</button>
+    </li>
+  </template>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+    crossorigin="anonymous"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>
