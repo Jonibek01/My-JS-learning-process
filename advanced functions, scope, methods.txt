@@ -1,0 +1,187 @@
+//======================== Scope =============================//
+//Scope - ichkarida berilgan var bo'lsa, u faqat o'sha scope ni ichida ishlaydi, tashqaridan uni chaqirib bo'lmaydi faqatgina usha funksiya ishlayveradi
+// If var is in scope that will not work outside of scope, only function name
+//Ammo tashqaridan global scope ochilgan bo'lsa u ichkarida ham ishlayveradi
+// However, if var is given outside of that scope which is global, that will work in the inside as well
+
+//f.e-1
+// let bird = 'mandarin duck';  // - global scope
+
+// function birdWatch() {
+//   //this bird is scoped to birdWatch()
+//   let bird = 'golden pheasant';
+//   console.log(bird); //"golden pheasant"
+// }
+// birdWatch();
+// console.log(bird); //"mandarin duck", it can't take the var of inside
+
+//====================== Block Scope ==========================//
+// Blocks always contain curly brackets {}
+
+// let & const are BLOCK SCOPED
+if (true) {
+  const animal = 'eel';
+  console.log(animal); //'eel'
+}
+console.log(animal); //NOT DEFINED!
+
+// VAR IS NOT BLOCK SCOPED so it will work outside as well
+if (true) {
+  var animal = 'eel';
+  console.log(animal); //'eel'
+}
+console.log(animal); //'eel'
+
+
+// let animals = ['grizzly bear', 'panda bear', 'spectacled bear'];
+// var i = 10;
+// for (var i = 0; i < animals.length; i++) {
+//     console.log(i, animals[i])
+// }
+// console.log(i)
+
+//====================== Lexical Scope ==========================//
+
+function outer() {
+//   let movie = 'Amadeus';
+
+//   function inner() {
+//     // let movie = "The Shining";
+
+//     function extraInner() {
+//       //movie is not defined in this function
+//       //but it has access to parent function's variables
+//       console.log(movie.toUpperCase())
+//     }
+//     extraInner();
+//   }
+//   inner();
+// }
+
+// outer(); //'AMADEUS'
+
+// if inside does not work outside will work
+
+//====================== Function Expression ==========================//
+
+// Function Statement
+function add(x, y) {
+  return x + y;
+}
+
+// Function Expression (Anonymous)
+const sum = function (x, y) {
+  return x + y;
+}
+
+// Function Expression (Named)
+const product = function multiply(x, y) {
+  return x * y;
+}
+
+const square = function(num) {
+  return num * num;
+}
+square(7) // square now is function // 7 is parametr which is num
+
+//====================== Higher Order Function ==========================//
+
+function add(x, y) {
+  return x + y;
+}
+
+const subtract = function (x, y) {
+  return x - y;
+}
+
+function multiply(x, y) {
+  return x * y;
+}
+
+const divide = function (x, y) {
+  return x / y;
+}
+
+//We can store functions in an array!
+const operations = [add, subtract, multiply, divide];
+
+//Loop over all the functions in operations
+for (let func of operations) {
+  let result = func(30, 5); //execute func!
+  console.log(result);
+}
+// 35
+// 25
+// 150
+// 6
+
+// We can also store functions in objects!
+const thing = {
+  doSomething: multiply
+}
+thing.doSomething(4, 5) //20
+
+//====================== Function As Arguments ==========================//
+
+// This function accepts another function as an argument
+// function callThreeTimes(f) {
+//     //And calls it 3 times:
+//     f();
+//     f();
+//     f();
+//   }
+//   function cry() {
+//     console.log("BOO HOO I'M SO SAD!");
+//   }
+  
+//   function rage() {
+//     console.log("I HATE EVERYTHING!");
+//   }
+  
+//   function repeatNTimes(action, num) {
+//     // call action (a function) num number of times
+//     //to num ni soni chiqgunicha action qaytarilib borursin
+//     for (let i = 0; i < num; i++) {
+//       action();
+//     }
+//   }
+  
+//   repeatNTimes(rage, 13);
+  
+//   // Accepts 2 functions as arguments
+//   // Randomly selects 1 to execute
+//   function pickOne(f1, f2) {
+//     let rand = Math.random();
+//     console.log(rand)
+//     if (rand < 0.5) {
+//       f1();
+//     } else {
+//       f2();
+//     }
+//   }
+//====================== Function As Return Values ==========================//
+
+// multiplying
+// function multiplyBy(num) {
+//   return function (x) {
+//     return x * num;
+//   }
+// }
+
+// const isChild = multiplyBy(5)
+// in console: isChild(4)
+
+// ex2
+// function makeBetweenFunc (x,y) {
+// 	return function (num) {
+// 		if( num > x && num < y ){
+// 			return true;
+////////// another way return num > x && num < y;
+//		}else {
+//		 return false;
+//		}
+//
+// 	const isChild = makeBetweenFunc(0, 30)
+// in Console: isChild(15)//true;
+//      const isTemp = makeBetweenFunc(15,45)
+// in Console: isTemp(46)//false;
