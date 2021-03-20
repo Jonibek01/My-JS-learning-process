@@ -1,0 +1,43 @@
+//=================== Find the longest word function ============================// 
+
+var findTheLongestWord = function (text){
+//matnimizga text deb nom bervolamiz
+//matnimizni ichidagilarga split beramiz yani ' '- bo'sh joy
+  var splittedText = text.split(' ');
+//eng uzun so'z deb var beramiz va uning qiymatini matnning eng birinchisiga tenglashtirib //quyamiz 
+  var theLongestWord = splittedText[0];
+//har bir so'zga to'xtalishi uchun for ishlatamiz
+  for (let i = 0; i < splittedText.length; i++) {
+//agarda split qilingan matnning qiymatining uzunligi eng uzun so'zning uzunligidan katta //bo'lsa
+     if(splittedText[i].length > theLongestWord.length) {
+//eng uzun so'zning qiymatini = split qilingan matnni har bir qiymatining uzunligiga //tenglashtirib quyamiz 
+       theLongestWord = splittedText[i];
+     }
+  }
+//funksiyasini qaytaramiz
+  return theLongestWord;
+}
+
+findTheLongestWord(`Assalomu Aleykum hurmatliy ustoz Xush ko'rdik sizni keling xizmat?`);
+
+
+
+//====================== Find the biggest number ================================//
+
+// const findTheBiggestNum = function(num) {
+//   // eng katta son deb var ochamiz
+//   var theBiggestNum = num[0];
+//   // kod aylanishi yani har biriga to'xtalib o'tishi uchun for ishlatamiz
+//   for(var i = 1; i < num.length; i++) {
+//     // arrayni ichidagi raqam katta bo'lsa eng katta sondan
+//     if ( num[i] > theBiggestNum) {
+//       // eng katta son teng bo'lsin arrayni ichidagi sonning qiymatiga
+//       theBiggestNum = num[i];
+//     }
+//   }
+//   // har biriga to'xtalib tekshirib chiqqanidan keyin funksiyani qaytaramiz
+//   return theBiggestNum;
+// }
+
+// var numbers = [1, 2, 44, 3, 75, 100, 55, 110, 101, 999];
+// findTheBiggestNum(numbers);
