@@ -4,7 +4,7 @@ let movies = [
   "The Fantastic Mr. Fox",
   "Mr. and Mrs. Smith",
   "Mrs. Doubtfire",
-  "Mr. Deeds"
+  "Mr. Deeds
 ]
 
 // Find first movie that includes 'Mrs' in its title:
