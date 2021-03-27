@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Starter</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <main>
+    <div class="container mt-3">
+      <h1 class="h3 p-4 text-center text-warning bg-dark">Contact</h1>
+    </div>
+
+    <div class="container">
+      <div class="row justify-content-center mt-5">
+        <div class="col-md-6">
+
+          <form class="js-form-info" action="#" method="POST">
+
+            <div class="form-group">
+              <label for="person-name">First Name: </label>
+              <input class="js-fname-input" type="name" id="person-name" name="name" required>
+            </div>
+            <div class="form-group">
+              <label for="person-surname">Last Name: </label>
+              <input class="js-surname-input" type="surname" id="person-surname" name="surname" required>
+            </div>
+            <div class="form-group">
+              <label for="person-num">Tel Numbe: </label>
+              <input class="js-num-input" type="tel" id="person-num" name="number" min="7" required> 
+            </div>
+            <div class="form-group">
+              <label for="person-contact">Contact Inf:</label>
+              <input class="js-contact-input" type="text" id="person-contact" name="contact" required>
+            </div>
+
+            <button class="btn js-send-btn btn-success w-50" type="submit">Send</button>
+          </form>
+         
+        </div>
+
+        <div class="col-md-6">
+            <div class="alert alert-info"> <h5 class="text-center">List Of Person's Info</h5> 
+              <ol class="js-result"></ol>
+            </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/person-info.js"></script>
+
+</body>
+</html>
